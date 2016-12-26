@@ -11,7 +11,7 @@ ext {
 	gitCommit = getGitCommit()
 	sonatypeCredentialsAvailable = project.hasProperty('sonatypeUsername') && project.hasProperty('sonatypePassword')
 	isReleaseVersion = !isSnapshot
-	signingRequired = isReleaseVersion
+	signingRequired = false // FIXME temporary
 	sonatypeSnapshotUrl = 'https://oss.sonatype.org/content/repositories/snapshots'
 	sonatypeStagingUrl = 'https://oss.sonatype.org/service/local/staging/deploy/maven2'
 	buildDate = (new java.text.SimpleDateFormat("yyyy-MM-dd")).format(new Date())
